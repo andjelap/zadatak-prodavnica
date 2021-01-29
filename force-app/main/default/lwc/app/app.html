@@ -1,0 +1,29 @@
+<template>
+    <lightning-layout multiple-rows title="Product App" >
+
+        <lightning-layout-item size="8" title="List" style="background-color: rgb(186, 193, 194); border-style: outset; border-color:rgb(64, 141, 167)">
+            <c-list products={products} ontileclicked={handleTileClicked} onbuy={handleBuy} oncompare={handleCompare}></c-list>
+        </lightning-layout-item>
+
+        <lightning-layout-item size="0.5">
+        </lightning-layout-item>
+
+        <lightning-layout-item size="3" title="Detail">
+            <c-detail selected-product-id={selectedProductId} onbuy={handleBuy} oncompare={handleCompare}></c-detail>
+        </lightning-layout-item>
+
+        <lightning-layout-item size="5" title="Checkout" padding="around-small"> 
+            <c-buy></c-buy>
+        </lightning-layout-item>
+
+        <lightning-layout-item size="1">
+        </lightning-layout-item>
+
+        <lightning-layout-item size="6" title="Compare" padding="around-small">
+            <c-compare></c-compare>
+        </lightning-layout-item>
+
+        
+
+    </lightning-layout>
+</template>

@@ -1,0 +1,36 @@
+<template>
+    <lightning-card title="Compare">
+        <lightning-layout>
+            <lightning-layout-item size="4">
+                <template if:true={product1Id}>
+                    <c-detail compare selected-product-id={product1Id}></c-detail>
+                </template>
+                <template if:false={product1Id}>
+                    <p>
+                        Please Select Product For Comparassion.
+                    </p>
+                </template>
+            </lightning-layout-item>
+            <lightning-layout-item size="4">
+                <template if:true={product2Id}>
+                        <c-detail compare selected-product-id={product2Id}></c-detail>
+                </template>
+                <template if:false={product2Id}>
+                    <p>
+                        Please Select Product For Comparassion.
+                    </p>
+                </template>
+            </lightning-layout-item>
+            <lightning-layout-item size="4">
+                <template if:true={product3Id}>
+                        <c-detail compare selected-product-id={product3Id}></c-detail>
+                </template>
+                <template if:false={product3Id}>
+                    <p>
+                        Please Select Product For Comparassion.
+                    </p>
+                </template>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

@@ -1,0 +1,11 @@
+<template>
+    <div onclick={handleClick}>
+       <lightning-card title={product.Name}>
+         <lightning-button label="Compare" slot="actions" onclick={handleCompare}></lightning-button>
+         <lightning-button label="Buy" slot="actions" onclick={handleBuy}></lightning-button>
+         <img src={product.Image__c} alt="Product Image"/>
+         <div>Price: <lightning-formatted-number value={product.Price__c} format-style="currency" maximum-fraction-digits="2"></lightning-formatted-number></div>
+         <div>Description: {product.Description}</div>
+       </lightning-card>
+    </div>
+</template>

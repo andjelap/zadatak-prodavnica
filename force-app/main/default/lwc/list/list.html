@@ -1,0 +1,17 @@
+<template>
+    <template if:true={products.data}>
+        <div class="slds-scrollable_y" style="max-height: 500px;">
+            <lightning-layout multiple-rows>
+                <template for:each={products.data} for:item="product">
+                    <lightning-layout-item padding="around-small" key={product.Id} size="3">
+                        <c-tile product={product} onclicked={handleTileClicked} onbuy={handleBuy} oncompare={handleCompare}></c-tile>
+                    </lightning-layout-item>
+                </template>
+            </lightning-layout>
+        </div>
+</template>
+    <template if:true={products.error}>
+       <p>ERROR: {products.error.body.message} </p>
+   </template>
+
+</template>

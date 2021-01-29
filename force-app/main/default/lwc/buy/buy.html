@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Checkout">
+            <div style="height: 155px;">
+                    <lightning-datatable
+                            key-field="Id"
+                            data={data}
+                            columns={columns}
+                            hide-checkbox-column>
+                    </lightning-datatable>
+                    </div>
+                    <div>
+                            Total Price: <lightning-formatted-number value={total} format-style="currency" maximum-fraction-digits="2"></lightning-formatted-number>
+                    </div>
+    </lightning-card>
+    
+</template>

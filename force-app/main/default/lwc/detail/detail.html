@@ -1,0 +1,24 @@
+<template>
+    <template if:true={product} >
+        <lightning-card title={name}>
+            <template if:false={compare} style="background-color: beige;">
+                <lightning-button slot="actions" label="Compare" onclick={handleCompare}></lightning-button>
+                <lightning-button slot="actions" label="Buy" onclick={handleBuy}></lightning-button>
+                <img src={picture} alt="Product Image" style="max-width: 300px;"/>
+            </template>  
+            
+            <div>Price: <lightning-formatted-number value={price} format-style="currency" maximum-fraction-digits="2"></lightning-formatted-number></div>
+            <div>Color: {color}</div>    
+            <div>Dimensions: {dimensions}</div>    
+            <div>Rating: {rating}/10</div>    
+            <div>Description: {description}</div>
+        </lightning-card>
+    </template>
+    <template if:false={product}>
+        <lightning-card>
+            <p>
+                Please Select Product From The List.
+            </p>
+        </lightning-card>
+    </template>
+</template>
