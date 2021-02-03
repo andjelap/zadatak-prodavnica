@@ -6,12 +6,12 @@
                 <lightning-button slot="actions" label="Buy" onclick={handleBuy}></lightning-button>
                 <img src={picture} alt="Product Image" style="max-width: 300px;"/>
             </template>  
-            
-            <div>Price: <lightning-formatted-number value={price} format-style="currency" maximum-fraction-digits="2"></lightning-formatted-number></div>
-            <div>Color: {color}</div>    
-            <div>Dimensions: {dimensions}</div>    
-            <div>Rating: {rating}/10</div>    
-            <div>Description: {description}</div>
+        
+            <div style="margin-left: 10px;">Price: <lightning-formatted-number value={price} format-style="currency" maximum-fraction-digits="2"></lightning-formatted-number></div>
+            <div style="margin-left: 10px;">Color: {color}</div>    
+            <div style="margin-left: 10px;">Dimensions: {dimensions}</div>    
+            <div style="margin-left: 10px;">Rating: {rating}/10</div>    
+            <div style="margin-left: 10px;">Description: {description}</div>
         </lightning-card>
     </template>
     <template if:false={product}>
