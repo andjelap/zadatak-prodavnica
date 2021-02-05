@@ -4,7 +4,7 @@
             <lightning-layout-item size="4">
                 <template if:true={product1Id}>
                     <c-detail compare selected-product-id={product1Id}></c-detail>
-                    <lightning-button variant="destructive-text" label="Remove"  onclick={handleRemove1} class="slds-m-left_x-small"></lightning-button>
+                    <lightning-button label="Remove"  onclick={handleRemove1} class="slds-m-left_x-small"></lightning-button>
                 </template>
                 <template if:false={product1Id}>
                     <p>
@@ -15,7 +15,7 @@
             <lightning-layout-item size="4">
                 <template if:true={product2Id}>
                         <c-detail compare selected-product-id={product2Id}></c-detail>
-                        <lightning-button variant="destructive-text" label="Remove"  onclick={handleRemove2} class="slds-m-left_x-small"></lightning-button>
+                        <lightning-button  label="Remove"  onclick={handleRemove2} class="slds-m-left_x-small"></lightning-button>
                 </template>
                 <template if:false={product2Id}>
                     <p>
@@ -26,7 +26,7 @@
             <lightning-layout-item size="4">
                 <template if:true={product3Id}>
                         <c-detail compare selected-product-id={product3Id}></c-detail>
-                        <lightning-button variant="destructive-text" label="Remove"  onclick={handleRemove3} class="slds-m-left_x-small"></lightning-button>
+                        <lightning-button  label="Remove"  onclick={handleRemove3} class="slds-m-left_x-small"></lightning-button>
                 </template>
                 <template if:false={product3Id}>
                     <p>
